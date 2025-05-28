@@ -6,6 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6C1AB4C42DE7298900405445 /* APIHarborApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4C32DE7298900405445 /* APIHarborApp.swift */; };
+		6C1AB4EC2DE72A2000405445 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4EB2DE72A2000405445 /* UserView.swift */; };
+		6C1AB4F62DE72B6500405445 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1AB4F52DE72B6500405445 /* GRDB */; };
+		6C1AB4F82DE72B9700405445 /* PublicAPIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4F72DE72B9700405445 /* PublicAPIEntry.swift */; };
+		6C1AB4FA2DE72D1C00405445 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4F92DE72D1C00405445 /* NetworkService.swift */; };
+		6C1AB4FC2DE72D8B00405445 /* FavoriteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4FB2DE72D8B00405445 /* FavoriteAPI.swift */; };
+		6C1AB4FE2DE72E3300405445 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB4FD2DE72E3300405445 /* DatabaseManager.swift */; };
+		6C1AB5022DE733F400405445 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB5012DE733F300405445 /* FavoritesViewModel.swift */; };
+		6C1AB5042DE741F200405445 /* APIListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB5032DE741F200405445 /* APIListViewModel.swift */; };
+		6C1AB5062DE74A2200405445 /* APIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB5052DE74A2200405445 /* APIListView.swift */; };
+		6C1AB5082DE74A6600405445 /* APIListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB5072DE74A6600405445 /* APIListRowView.swift */; };
+		6C1AB50A2DE74AA000405445 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AB5092DE74AA000405445 /* FavoritesListView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6C1AB4CE2DE7298A00405445 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,8 +40,19 @@
 
 /* Begin PBXFileReference section */
 		6C1AB4C02DE7298900405445 /* APIHarbor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIHarbor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1AB4C32DE7298900405445 /* APIHarborApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHarborApp.swift; sourceTree = "<group>"; };
 		6C1AB4CD2DE7298A00405445 /* APIHarborTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIHarborTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1AB4D72DE7298A00405445 /* APIHarborUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIHarborUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1AB4EB2DE72A2000405445 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		6C1AB4F72DE72B9700405445 /* PublicAPIEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPIEntry.swift; sourceTree = "<group>"; };
+		6C1AB4F92DE72D1C00405445 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6C1AB4FB2DE72D8B00405445 /* FavoriteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAPI.swift; sourceTree = "<group>"; };
+		6C1AB4FD2DE72E3300405445 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		6C1AB5012DE733F300405445 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		6C1AB5032DE741F200405445 /* APIListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListViewModel.swift; sourceTree = "<group>"; };
+		6C1AB5052DE74A2200405445 /* APIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListView.swift; sourceTree = "<group>"; };
+		6C1AB5072DE74A6600405445 /* APIListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListRowView.swift; sourceTree = "<group>"; };
+		6C1AB5092DE74AA000405445 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1AB4F62DE72B6500405445 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +102,12 @@
 		6C1AB4B72DE7298900405445 = {
 			isa = PBXGroup;
 			children = (
+				6C1AB4F32DE72B1C00405445 /* Persistence */,
+				6C1AB4F22DE72B1600405445 /* Network */,
+				6C1AB4F12DE72AFA00405445 /* Helpers */,
+				6C1AB4EE2DE72A3000405445 /* ViewModels */,
+				6C1AB4ED2DE72A2A00405445 /* Models */,
+				6C1AB4EA2DE72A0500405445 /* Views */,
 				6C1AB4C22DE7298900405445 /* APIHarbor */,
 				6C1AB4D02DE7298A00405445 /* APIHarborTests */,
 				6C1AB4DA2DE7298A00405445 /* APIHarborUITests */,
@@ -90,6 +123,59 @@
 				6C1AB4D72DE7298A00405445 /* APIHarborUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6C1AB4EA2DE72A0500405445 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB4EB2DE72A2000405445 /* UserView.swift */,
+				6C1AB5052DE74A2200405445 /* APIListView.swift */,
+				6C1AB5072DE74A6600405445 /* APIListRowView.swift */,
+				6C1AB5092DE74AA000405445 /* FavoritesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C1AB4ED2DE72A2A00405445 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB4FB2DE72D8B00405445 /* FavoriteAPI.swift */,
+				6C1AB4F72DE72B9700405445 /* PublicAPIEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C1AB4EE2DE72A3000405445 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB5012DE733F300405445 /* FavoritesViewModel.swift */,
+				6C1AB5032DE741F200405445 /* APIListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6C1AB4F12DE72AFA00405445 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB4C32DE7298900405445 /* APIHarborApp.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6C1AB4F22DE72B1600405445 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB4F92DE72D1C00405445 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6C1AB4F32DE72B1C00405445 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AB4FD2DE72E3300405445 /* DatabaseManager.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +198,7 @@
 			);
 			name = APIHarbor;
 			packageProductDependencies = (
+				6C1AB4F52DE72B6500405445 /* GRDB */,
 			);
 			productName = APIHarbor;
 			productReference = 6C1AB4C02DE7298900405445 /* APIHarbor.app */;
@@ -195,6 +282,9 @@
 			);
 			mainGroup = 6C1AB4B72DE7298900405445;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6C1AB4F42DE72B6500405445 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6C1AB4C12DE7298900405445 /* Products */;
 			projectDirPath = "";
@@ -236,6 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1AB5082DE74A6600405445 /* APIListRowView.swift in Sources */,
+				6C1AB4C42DE7298900405445 /* APIHarborApp.swift in Sources */,
+				6C1AB4EC2DE72A2000405445 /* UserView.swift in Sources */,
+				6C1AB5022DE733F400405445 /* FavoritesViewModel.swift in Sources */,
+				6C1AB5042DE741F200405445 /* APIListViewModel.swift in Sources */,
+				6C1AB5062DE74A2200405445 /* APIListView.swift in Sources */,
+				6C1AB50A2DE74AA000405445 /* FavoritesListView.swift in Sources */,
+				6C1AB4FE2DE72E3300405445 /* DatabaseManager.swift in Sources */,
+				6C1AB4FA2DE72D1C00405445 /* NetworkService.swift in Sources */,
+				6C1AB4F82DE72B9700405445 /* PublicAPIEntry.swift in Sources */,
+				6C1AB4FC2DE72D8B00405445 /* FavoriteAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +659,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C1AB4F42DE72B6500405445 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C1AB4F52DE72B6500405445 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C1AB4F42DE72B6500405445 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C1AB4B82DE7298900405445 /* Project object */;
 }

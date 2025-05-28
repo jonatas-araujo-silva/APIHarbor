@@ -1,9 +1,3 @@
-//
-//  APIHarborApp.swift
-//  APIHarbor
-//
-//  Created by Jonatas Araujo on 28/05/25.
-//
 
 import SwiftUI
 
@@ -11,7 +5,7 @@ import SwiftUI
 struct APIHarborApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserView()
         }
     }
 }

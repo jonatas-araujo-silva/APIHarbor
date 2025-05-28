@@ -1,0 +1,50 @@
+{
+  "count": 5,
+  "entries": [
+    {
+      "API": "Cat Facts",
+      "Description": "Daily cat facts",
+      "Auth": "",
+      "HTTPS": true,
+      "Cors": "no",
+      "Link": "https://alexwohlbruck.github.io/cat-facts/",
+      "Category": "Animals"
+    },
+    {
+      "API": "Bored API",
+      "Description": "Find random activities to fight boredom",
+      "Auth": "",
+      "HTTPS": true,
+      "Cors": "yes",
+      "Link": "https://www.boredapi.com/",
+      "Category": "Development"
+    },
+    {
+      "API": "OpenWeatherMap",
+      "Description": "Weather forecasts, nowcasts and history at any location",
+      "Auth": "apiKey",
+      "HTTPS": true,
+      "Cors": "yes",
+      "Link": "https://openweathermap.org/api",
+      "Category": "Weather"
+    },
+    {
+      "API": "PokéAPI",
+      "Description": "All the Pokémon data you'll ever need in one place",
+      "Auth": "",
+      "HTTPS": true,
+      "Cors": "yes",
+      "Link": "https://pokeapi.co/",
+      "Category": "Games & Comics"
+    },
+    {
+      "API": "JSONPlaceholder",
+      "Description": "Free fake API for testing and prototyping",
+      "Auth": "",
+      "HTTPS": true,
+      "Cors": "yes",
+      "Link": "https://jsonplaceholder.typicode.com/",
+      "Category": "Test Data"
+    }
+  ]
+}
