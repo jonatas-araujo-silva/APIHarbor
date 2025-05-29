@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct FavoritesListView: View {
@@ -38,6 +37,7 @@ struct FavoritesListView: View {
                 }
                 .listStyle(.plain)
                 .animation(.default, value: viewModel.favoriteAPIs)
+                .accessibilityIdentifier("favoritesAPIsList")
             }
         }
         .navigationTitle("Favorite APIs")
@@ -57,7 +57,7 @@ extension FavoriteAPI {
             Description: self.descriptionText,
             Auth: "",
             HTTPS: true,
-            Cors: "unknown", 
+            Cors: "unknown",  
             Link: self.link,
             Category: self.category
         )

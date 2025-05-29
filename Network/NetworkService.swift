@@ -1,7 +1,7 @@
 
 import Foundation
 
-class NetworkService {
+class NetworkService: NetworkServiceProtocol {
     //former method to retrieve data, this is down...
     // private let apiURL = URL(string: "https://api.publicapis.org/entries")!
 

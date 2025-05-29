@@ -3,7 +3,7 @@ import Foundation
 import GRDB
 import UIKit
 
-class DatabaseManager {
+class DatabaseManager: DatabaseManagerProtocol {
     // MARK: - Properties
 
     // singleton pattern:

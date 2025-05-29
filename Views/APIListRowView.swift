@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct APIListRowView: View {
@@ -14,6 +13,8 @@ struct APIListRowView: View {
                 Text(apiEntry.API)
                     .font(.headline)
                     .foregroundColor(.primary)
+                    .accessibilityIdentifier("apiName_\(apiEntry.API)")
+
                 Text(apiEntry.Description)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -71,7 +72,8 @@ struct APIListRowView: View {
             }
             .buttonStyle(.plain)
             .padding(.leading, 5)
+            .accessibilityIdentifier("favoriteButton_\(apiEntry.API)")
         }
-        .padding(.vertical, 8) 
+        .padding(.vertical, 8)
     }
 }

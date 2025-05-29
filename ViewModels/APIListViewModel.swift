@@ -23,11 +23,18 @@ class APIListViewModel: ObservableObject {
         }
     }
 
-    private let networkService = NetworkService()
-    private let dbManager = DatabaseManager.shared
-    init() {
-        Task {
-            await loadEntries()
+    private let networkService: NetworkServiceProtocol
+    private let dbManager: DatabaseManagerProtocol
+
+    init(networkService: NetworkServiceProtocol = NetworkService(),
+         dbManager: DatabaseManagerProtocol = DatabaseManager.shared,
+         loadInitialData: Bool = true) {
+        self.networkService = networkService
+        self.dbManager = dbManager
+        if loadInitialData { 
+            Task {
+                await loadEntries()
+            }
         }
     }
 
