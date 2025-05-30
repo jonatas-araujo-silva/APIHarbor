@@ -1,8 +1,4 @@
 # API Harbor 🚢
-
-[![Swift Version](https://img.shields.io/badge/Swift-5.x-orange.svg)](https://swift.org)
-[![Platform](https://img.shields.io/badge/Platform-iOS-blue.svg)](https://developer.apple.com/ios/)
-[![CI Status](https://github.com/jonatas-araujo-silva/APIHarbor/actions/workflows/main.yml/badge.svg)](https://github.com/jonatas-araujo-silva/APIHarbor/actions/workflows/main.yml)
 API Harbor is an iOS application developed to showcase modern iOS development skills using Swift and SwiftUI. It functions as a directory for public APIs, allowing users to browse, search, and manage a list of their favorite APIs. This project demonstrates capabilities in UI/UX design with SwiftUI, local data persistence using SQLite (via GRDB.swift), handling data (from a local JSON source), comprehensive testing, and CI/CD automation.
 
 ## 🌟 Features
