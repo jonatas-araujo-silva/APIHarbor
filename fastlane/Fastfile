@@ -1,0 +1,105 @@
+# fastlane/Fastfile
+
+# Set the default platform to iOS for all lanes
+default_platform(:ios)
+
+platform :ios do
+  # This block is executed before any lane in this platform block
+  before_all do
+    # Ensure environment is clean or dependencies are resolved
+    puts "Fastlane: Executing before_all for iOS platform."
+    
+    # Using absolute path for the project. Ensure 'APIHarbor' is your correct scheme name.
+    puts "Resolving Swift Package Manager dependencies..."
+    # Quoting the path because it contains spaces ("iOS Apps")
+    sh "xcodebuild -resolvePackageDependencies -project \"/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcodeproj\" -scheme APIHarbor -configuration Debug"
+    # If you had a workspace, you would use its absolute path:
+    # sh "xcodebuild -resolvePackageDependencies -workspace \"/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcworkspace\" -scheme APIHarbor -configuration Debug"
+    
+    # You could also ensure CocoaPods are installed if your project used them:
+    # cocoapods
+  end
+
+  # Lane to run SwiftLint for static code analysis
+  desc "Run SwiftLint to analyze source code"
+  lane :lint do
+    puts "Running SwiftLint..."
+    swiftlint(
+      mode: :lint,
+      executable: "swiftlint",
+      strict: false,
+      ignore_exit_status: false,
+      reporter: "html",
+      output_file: "fastlane/swiftlint_report.html",
+      # config_file: '.swiftlint.yml', # Temporarily commented out if you don't have this file yet.
+                                      # SwiftLint will use default rules.
+                                      # If you create a .swiftlint.yml, you can uncomment this.
+      quiet: false
+    )
+    puts "SwiftLint analysis complete. Report generated at fastlane/swiftlint_report.html (if configured)."
+  end
+
+  # Lane to run Unit and UI tests
+  desc "Run Unit and UI tests for APIHarbor"
+  lane :tests do
+    puts "Running tests for APIHarbor..."
+    scan(
+      scheme: "APIHarbor",                   # REQUIRED: Your app's main scheme
+      project: "/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcodeproj", # Absolute path
+      # workspace: "/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcworkspace", # Use this if you have an .xcworkspace
+      
+      clean: true,
+      output_directory: "./fastlane/test_output",
+      output_types: "html,junit",
+      derived_data_path: "fastlane_derived_data_scan",
+      xcodebuild_formatter: "xcbeautify"
+    )
+    puts "Tests finished. Reports are in fastlane/test_output."
+  end
+
+  # Lane to build the app (Debug configuration for Simulator)
+  desc "Build the APIHarbor app (Debug for Simulator)"
+  lane :build_app_simulator do
+    puts "Building APIHarbor for Simulator (Debug)..."
+    gym(
+      scheme: "APIHarbor",                   # Your app's scheme
+      project: "/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcodeproj", # Absolute path
+      # workspace: "/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcworkspace", # Use this if you have an .xcworkspace
+      
+      configuration: "Debug",
+      sdk: "iphonesimulator",
+      destination: "generic/platform=iOS Simulator",
+      clean: true,
+      output_directory: "./build/ios_app",
+      output_name: "APIHarbor.app",
+      derived_data_path: "fastlane_derived_data_gym"
+    )
+    puts "App built successfully for simulator at ./build/ios_app/APIHarbor.app"
+  end
+
+  # Combined lane for Continuous Integration
+  desc "Run all CI steps: lint, tests, and build for simulator"
+  lane :ci_pipeline do
+    puts "Starting CI pipeline for APIHarbor..."
+    
+    begin
+      lint
+      tests
+      build_app_simulator
+      puts "CI pipeline finished successfully!"
+    rescue => exception
+      UI.error("ERROR: CI Pipeline failed in lane '#{lane_context[SharedValues::LANE_NAME]}'")
+      UI.error("Error Message: #{exception.message}")
+      raise exception 
+    end
+  end
+
+  error do |lane, exception, options|
+    UI.error("Fastlane lane '#{lane}' failed.")
+    UI.error("Error: #{exception.message}")
+  end
+
+  after_all do |lane|
+    puts("Fastlane finished executing iOS lane '#{lane}'.")
+  end
+end

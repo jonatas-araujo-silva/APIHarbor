@@ -14,10 +14,10 @@ struct FavoriteAPI: Equatable, Identifiable, Codable, FetchableRecord, Persistab
 
     init(from entry: PublicAPIEntry, dateFavorited: Date = Date()) {
         self.id = entry.id
-        self.apiName = entry.API
-        self.descriptionText = entry.Description
-        self.link = entry.Link
-        self.category = entry.Category
+        self.apiName = entry.api
+        self.descriptionText = entry.descriptionText
+        self.link = entry.link
+        self.category = entry.category
         self.dateFavorited = dateFavorited
     }
 

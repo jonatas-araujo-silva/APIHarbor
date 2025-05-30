@@ -16,9 +16,9 @@ class APIListViewModel: ObservableObject {
             return entries
         } else {
             return entries.filter { entry in
-                entry.API.localizedCaseInsensitiveContains(searchText) ||
-                entry.Description.localizedCaseInsensitiveContains(searchText) ||
-                (entry.Category ?? "").localizedCaseInsensitiveContains(searchText)
+                entry.api.localizedCaseInsensitiveContains(searchText) ||
+                entry.descriptionText.localizedCaseInsensitiveContains(searchText) ||
+                (entry.category ?? "").localizedCaseInsensitiveContains(searchText)
             }
         }
     }
@@ -49,7 +49,7 @@ class APIListViewModel: ObservableObject {
 
         do {
             let fetchedEntries = try await networkService.fetchPublicAPIEntries()
-            self.entries = fetchedEntries.sorted(by: { $0.API.lowercased() < $1.API.lowercased() })
+            self.entries = fetchedEntries.sorted(by: { $0.api.lowercased() < $1.api.lowercased() })
             print("APIListViewModel: Successfully fetched \(self.entries.count) entries.")
             await refreshFavoriteStatus()
         } catch {
@@ -62,22 +62,22 @@ class APIListViewModel: ObservableObject {
 
     func toggleFavorite(for entry: PublicAPIEntry) async {
         let isCurrentlyFavorite = favoriteIDs.contains(entry.id)
-        print("APIListViewModel: Toggling favorite for '\(entry.API)'. Currently favorite: \(isCurrentlyFavorite)")
+        print("APIListViewModel: Toggling favorite for '\(entry.api)'. Currently favorite: \(isCurrentlyFavorite)")
 
         do {
             if isCurrentlyFavorite {
                 try await dbManager.removeFavorite(id: entry.id)
                 favoriteIDs.remove(entry.id)
-                print("APIListViewModel: Unfavorited '\(entry.API)'.")
+                print("APIListViewModel: Unfavorited '\(entry.api)'.")
             } else {
                 let favorite = FavoriteAPI(from: entry)
                 try await dbManager.saveFavorite(favorite)
                 favoriteIDs.insert(entry.id)
-                print("APIListViewModel: Favorited '\(entry.API)'.")
+                print("APIListViewModel: Favorited '\(entry.api)'.")
             }
         } catch {
-            print("APIListViewModel: Error toggling favorite for \(entry.API) - \(error.localizedDescription)")
-            self.errorMessage = "Could not update favorite status for \(entry.API)."
+            print("APIListViewModel: Error toggling favorite for \(entry.api) - \(error.localizedDescription)")
+            self.errorMessage = "Could not update favorite status for \(entry.api)."
             await refreshFavoriteStatus()
         }
     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.00025">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: xcodebuild -resolvePackageDependencies -project &quot;/Users/jonatasaraujo/Documents/iOS Apps/APIHarbor/APIHarbor.xcodeproj&quot; -scheme APIHarbor -configuration Debug" time="1.650953">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: swiftlint" time="0.358838">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

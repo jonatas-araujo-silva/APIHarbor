@@ -53,13 +53,13 @@ struct FavoritesListView: View {
 extension FavoriteAPI {
     func toPublicAPIEntry() -> PublicAPIEntry {
         return PublicAPIEntry(
-            API: self.apiName,
-            Description: self.descriptionText,
-            Auth: "",
-            HTTPS: true,
-            Cors: "unknown",  
-            Link: self.link,
-            Category: self.category
+            api: self.apiName,
+            descriptionText: self.descriptionText,
+            auth: "",
+            https: true,
+            cors: "unknown",  
+            link: self.link,
+            category: self.category
         )
     }
 }

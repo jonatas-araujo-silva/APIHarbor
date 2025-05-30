@@ -10,18 +10,18 @@ struct APIListRowView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 6) {
-                Text(apiEntry.API)
+                Text(apiEntry.api)
                     .font(.headline)
                     .foregroundColor(.primary)
-                    .accessibilityIdentifier("apiName_\(apiEntry.API)")
+                    .accessibilityIdentifier("apiName_\(apiEntry.api)")
 
-                Text(apiEntry.Description)
+                Text(apiEntry.descriptionText)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .lineLimit(3)
 
                 HStack(spacing: 8) {
-                    if let category = apiEntry.Category, !category.isEmpty {
+                    if let category = apiEntry.category, !category.isEmpty {
                         Text(category)
                             .font(.caption2)
                             .padding(.horizontal, 8)
@@ -31,8 +31,8 @@ struct APIListRowView: View {
                             .clipShape(Capsule())
                     }
                     
-                    if !apiEntry.Auth.isEmpty {
-                        Text("Auth: \(apiEntry.Auth)")
+                    if !apiEntry.auth.isEmpty {
+                        Text("Auth: \(apiEntry.auth)")
                             .font(.caption2)
                             .lineLimit(1)
                             .padding(.horizontal, 8)
@@ -42,12 +42,12 @@ struct APIListRowView: View {
                             .clipShape(Capsule())
                     }
 
-                    Text(apiEntry.HTTPS ? "HTTPS" : "HTTP")
+                    Text(apiEntry.https ? "HTTPS" : "HTTP")
                         .font(.caption2)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
-                        .background((apiEntry.HTTPS ? Color.green : Color.pink).opacity(0.15))
-                        .foregroundColor(apiEntry.HTTPS ? .green : .pink)
+                        .background((apiEntry.https ? Color.green : Color.pink).opacity(0.15))
+                        .foregroundColor(apiEntry.https ? .green : .pink)
                         .clipShape(Capsule())
                 }
                 .padding(.top, 2)
@@ -72,7 +72,7 @@ struct APIListRowView: View {
             }
             .buttonStyle(.plain)
             .padding(.leading, 5)
-            .accessibilityIdentifier("favoriteButton_\(apiEntry.API)")
+            .accessibilityIdentifier("favoriteButton_\(apiEntry.api)")
         }
         .padding(.vertical, 8)
     }

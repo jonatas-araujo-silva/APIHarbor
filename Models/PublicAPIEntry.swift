@@ -1,4 +1,3 @@
-
 import Foundation
 
 struct PublicAPIEntriesResponse: Codable {
@@ -7,14 +6,25 @@ struct PublicAPIEntriesResponse: Codable {
 }
 
 struct PublicAPIEntry: Codable, Identifiable, Hashable {
+    let api: String
+    let descriptionText: String
+    let auth: String
+    let https: Bool
+    let cors: String
+    let link: String
+    let category: String?
+
     var id: String {
-        return API + Link + (Category ?? "")
+        return api + link + (category ?? "")
     }
-    let API: String
-    let Description: String
-    let Auth: String
-    let HTTPS: Bool
-    let Cors: String
-    let Link: String
-    let Category: String? 
+
+    enum CodingKeys: String, CodingKey {
+        case api = "API"
+        case descriptionText = "Description"
+        case auth = "Auth"
+        case https = "HTTPS" 
+        case cors = "Cors"
+        case link = "Link"
+        case category = "Category"
+    }
 }
