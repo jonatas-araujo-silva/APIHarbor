@@ -16,12 +16,6 @@ API Harbor is an iOS application developed to showcase modern iOS development sk
       * **Animations:** Smooth list updates, screen transitions, and animated favorite button interactions.
   * **Error Handling & User Feedback:** Displays loading states and appropriate messages for errors or empty states.
 
-## 📸 Screenshots & GIFs
-![apiharbor-search-animation](https://github.com/user-attachments/assets/b1af1d18-5f24-4280-aed6-0340e0ea5f79)
-
-![apiharbor-listview](https://github.com/user-attachments/assets/a5cff028-bcd9-4553-9bb5-9e6c3ce83aa0)
-
-![apiharbor-favorites](https://github.com/user-attachments/assets/02439777-636b-4066-9ea1-cc678f7bcaf6)
 
 
 ## 🛠️ Technologies & Architecture
@@ -111,5 +105,13 @@ This project uses GitHub Actions and Fastlane to automate:
 
   * **Jonatas Araujo**
   * GitHub: [jonatas-araujo-silva](https://github.com/jonatas-araujo-silva)
+
+
+## 📸 Screenshots & GIFs
+![apiharbor-search-animation](https://github.com/user-attachments/assets/b1af1d18-5f24-4280-aed6-0340e0ea5f79)
+
+![apiharbor-listview](https://github.com/user-attachments/assets/a5cff028-bcd9-4553-9bb5-9e6c3ce83aa0)
+
+![apiharbor-favorites](https://github.com/user-attachments/assets/02439777-636b-4066-9ea1-cc678f7bcaf6)
 
 -----
