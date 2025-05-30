@@ -1,4 +1,4 @@
-# API Harbor 🚢
+![apiharbor-search-animation](https://github.com/user-attachments/assets/b1af1d18-5f24-4280-aed6-0340e0ea5f79)# API Harbor 🚢
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.x-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/Platform-iOS-blue.svg)](https://developer.apple.com/ios/)
@@ -22,11 +22,12 @@ API Harbor is an iOS application developed to showcase modern iOS development sk
 
 ## 📸 Screenshots & GIFs
 
-*(Ensure you create an `assets/readme/` folder in your project root, add your images/GIFs there, commit them, and then update the filenames below to match your actual files.)*
-
 | All APIs List                                       | Favorites List                                     | Search & Animations                               |
 | :--------------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |
-| `![All APIs List Screenshot](assets/readme/apiharbor-listview.png)` | `![Favorites List Screenshot](assets/readme/apiharbor-favorites.png)` | `![Search and Favorite Animation GIF](assets/readme/apiharbor-search-animation.gif)` |
+| `![All APIs List Screenshot]![apiharbor-listview](https://github.com/user-attachments/assets/049c74de-72a4-44ef-8b85-6ab341b82c6e)
+` | `![Favorites List Screenshot]![apiharbor-favorites](https://github.com/user-attachments/assets/349f4b90-629d-4f03-a6ea-803ce355c710)
+` | `![Search and Favorite Animation GIF]![apiharbor-search-animation](https://github.com/user-attachments/assets/c4ff38f0-b28d-4623-8dd6-a4225c077320)
+ |
 | *Browse the main directory of APIs.* | *Managing a personal list of saved favorites.* | *Interactive search and animated favoriting.* |
 
 ## 🛠️ Technologies & Architecture
